@@ -33,7 +33,7 @@ class SlideShowController extends BaseController {
  	 */
 	public function getShow($sliderSlug)
 	{	
-		$slideShows = \CMS::sliders()->getSlideShows($sliderSlug, 'all', 'en');
+		$slideShows = \CMS::sliders()->getSlideShows($sliderSlug, 'all');
 		return view('slider::slideshow.slideshow', compact('slideShows', 'sliderSlug'));
 	}
 
