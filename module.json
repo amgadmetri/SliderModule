@@ -1,0 +1,11 @@
+{
+	"name": "Slider",
+	"slug": "slider",
+	"version": "1.0",
+	"description": "This is the description for the Slider module.",
+	"repo_link": "https:\/\/github.com\/amgadmetri\/SliderModule.git",
+	"type" : "plugin",
+	"enabled": true,
+	"module_parts": ["Sliders", "SlideShows"],
+    "order" : 4
+}
