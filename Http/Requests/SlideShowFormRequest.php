@@ -25,7 +25,7 @@ class SlideShowFormRequest extends FormRequest
 	{
 		return [
 			'slider_id'     => 'required',
-			'link'          => 'url|max:150',
+			'link'          => 'max:150',
 			'description'   => 'required|max:150',
 			'status'        => 'required',
 			'display_order' => 'required'

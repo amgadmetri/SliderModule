@@ -25,7 +25,7 @@
     <div class="form-group">
       <label for="widget_image">Widget Image</label>
       @if($slideShow->slideShowImage)
-        <a href="{{ url('admin/gallery/preview', $slideShow->slideShowImage->id) }}" target="_blank">
+        <a href="{{ url('admin/gallery/show', $slideShow->slideShowImage->id) }}" target="_blank">
           <img class="img-responsive" src="{{ $slideShow->slideShowImage->path }}" width="200" height="200" id="widget_image">
         </a>
       @else
