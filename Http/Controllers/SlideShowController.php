@@ -1,6 +1,6 @@
 <?php namespace App\Modules\Slider\Http\Controllers;
 
-use App\Http\Controllers\BaseController;
+use App\Modules\Core\Http\Controllers\BaseController;
 use App\Modules\Slider\Http\Requests\SlideShowFormRequest;
 use Illuminate\Http\Request;
 

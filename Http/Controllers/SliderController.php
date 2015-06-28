@@ -1,6 +1,6 @@
 <?php namespace App\Modules\Slider\Http\Controllers;
 
-use App\Http\Controllers\BaseController;
+use App\Modules\Core\Http\Controllers\BaseController;
 
 class SliderController extends BaseController {
 

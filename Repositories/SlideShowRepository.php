@@ -1,6 +1,6 @@
 <?php namespace App\Modules\Slider\Repositories;
 
-use App\AbstractRepositories\AbstractRepository;
+use App\Modules\Core\AbstractRepositories\AbstractRepository;
 
 class SlideShowRepository extends AbstractRepository
 {
