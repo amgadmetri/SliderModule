@@ -53,6 +53,8 @@
         >
       </div>
     </div>
+    
+    @include('menus::parts.linksgenerator')
 
     <div class="form-group">
       <label for="description">Slide Description</label>
@@ -65,7 +67,7 @@
       aria-describedby ="sizing-addon2"
       >
     </div>
-
+    
     <div class="form-group">
     <label for="status">Status:</label>
       <select name="status" class="form-control">
@@ -94,4 +96,5 @@
 </div>
 
 @include('slider::slideshow.assets.createslideimage')
+@include('menus::menuitems.assets.selectlink')
 @stop

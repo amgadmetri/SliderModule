@@ -21,7 +21,6 @@
       </ul>
     </div>
     @endif
-    
     <div class="form-group">
       <label for="widget_image">Widget Image</label>
       @if($slideShow->slideShowImage)
@@ -50,9 +49,9 @@
         class            ="form-control" 
         name             ="link"
         @if ($slideShow->link ==='#')
-        value           ="{{''}}" 
+          value           ="{{''}}" 
         @else
-        value           ="{{ $slide->link }}"
+          value           ="{{ $slideShow->link }}"
         @endif  
         placeholder      ="Add Link here or choos from below .." 
         aria-describedby ="sizing-addon2"
@@ -60,6 +59,8 @@
         >
       </div>
     </div>
+    
+    @include('menus::parts.linksgenerator')
 
     <div class="form-group">
       <label for="description">Slide Description</label>
@@ -68,11 +69,10 @@
       class            ="form-control" 
       name             ="description" 
       value            ="{{ $slideShow->description }}" 
-      placeholder      ="Widget Description .." 
+      placeholder      ="Slide Description .." 
       aria-describedby ="sizing-addon2"
       >
     </div>
-
 
     <div class="form-group">
       <label for="status">Published:</label>
@@ -102,4 +102,5 @@
 </div>
 
 @include('slider::slideshow.assets.createslideimage')
+@include('menus::menuitems.assets.selectlink')
 @stop

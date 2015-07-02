@@ -46,10 +46,11 @@ class SlideShowController extends BaseController {
 	public function getCreate($sliderSlug)
 	{
 		$slider                  = \CMS::sliders()->first('slider_slug', $sliderSlug);
+		$links                   = \CMS::menu()->getLinks();
 		$maxDisplayOrder         = \CMS::slideShows()->model->max('display_order');
 		$sliderImageMediaLibrary = \CMS::galleries()->getMediaLibrary('photo', true, 'sliderImageMediaLibrary');
 
-		return view('slider::slideshow.createslideshow', compact('slider', 'sliderImageMediaLibrary', 'maxDisplayOrder'));
+		return view('slider::slideshow.createslideshow', compact('slider', 'sliderImageMediaLibrary', 'maxDisplayOrder', 'links'));
 	}
 
 	/**
@@ -78,8 +79,9 @@ class SlideShowController extends BaseController {
 	public function getEdit($id, $sliderSlug)
 	{
 		$slider                  = \CMS::sliders()->first('slider_slug', $sliderSlug);
-		$slideShow               = \CMS::slideShows()->find($id);
-		$sliderImageMediaLibrary = \CMS::galleries()->getMediaLibrary('photo', true, 'sliderImageMediaLibrary');
+		$links                   = \CMS::menu()->getLinks();
+		$slideShow               = \CMS::slideShows()->getSlideShow($id);
+		$sliderImageMediaLibrary = \CMS::galleries()->getMediaLibrary('photo', true, 'sliderImageMediaLibrary', 'links');
 
 		return view('slider::slideshow.editslideshow', compact('slideShow', 'slider', 'sliderImageMediaLibrary'));
 	}
